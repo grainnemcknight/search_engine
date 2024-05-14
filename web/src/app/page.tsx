@@ -12,8 +12,8 @@ export default function Home() {
         <Logo></Logo>
         <Search></Search>
         <div className="flex gap-2 flex-wrap justify-center">
-          <PresetQuery query="Who said live long and prosper?"></PresetQuery>
-          <PresetQuery query="Why do we only see one side of the moon?"></PresetQuery>
+          <PresetQuery query="What is City of Moers famous for?"></PresetQuery>
+          <PresetQuery query="What is the current weather in Moers?"></PresetQuery>
         </div>
         <Footer></Footer>
       </div>

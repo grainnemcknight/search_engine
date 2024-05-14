@@ -1,17 +1,16 @@
 <div align="center">
-<h1 align="center">Search with Lepton</h1>
-Build your own conversational search engine using less than 500 lines of code.
-<br/>
-<a href="https://search.lepton.run/" target="_blank"> Live Demo </a>
-<br/>
-<img width="70%" src="https://github.com/leptonai/search_with_lepton/assets/1506722/845d7057-02cd-404e-bbc7-60f4bae89680">
-</div>
+<h1 align="center">Search City of Moers</h1>
+
+## Run
+
+- Make sure all requirments satisified as per the `pyproject.toml` (run `poetry install` after installing `poetry`)
+- Navigate to the web directory and run `npm run build `
+- Run ` uvicorn search:app --reload `
 
 
 ## Features
 - Built-in support for LLM
 - Built-in support for search engine
-- Customizable pretty UI interface
 - Shareable, cached search results
 
 ## Setup Search Engine API
@@ -26,11 +25,10 @@ You have three options for Google Search: you can use the [SearchApi Google Sear
 ## Setup LLM and KV
 
 > [!NOTE]
-> We recommend using the built-in llm and kv functions with Lepton. 
-> Running the following commands to set up them automatically.
+
 
 ```shell
-pip install -U leptonai && lep login
+pip install -U 
 ```
 
 
@@ -46,40 +44,31 @@ cd web && npm install && npm run build
 ```
 3. Run server
 ```shell
-BACKEND=BING python search_with_lepton.py
+BACKEND=BING python search.py
 ```
 
 For Google Search using SearchApi:
 ```shell
 export SEARCHAPI_API_KEY=YOUR_SEARCHAPI_API_KEY
-BACKEND=SEARCHAPI python search_with_lepton.py
+BACKEND=SEARCHAPI python search.py
 ```
 
 For Google Search using Serper:
 ```shell
 export SERPER_SEARCH_API_KEY=YOUR_SERPER_API_KEY
-BACKEND=SERPER python search_with_lepton.py
+BACKEND=SERPER python search.py
 ```
 
 For Google Search using Programmable Search Engine:
 ```shell
 export GOOGLE_SEARCH_API_KEY=YOUR_GOOGLE_SEARCH_API_KEY
 export GOOGLE_SEARCH_CX=YOUR_GOOGLE_SEARCH_ENGINE_ID
-BACKEND=GOOGLE python search_with_lepton.py
+BACKEND=GOOGLE python search.py
 ```
 
 
 
 ## Deploy
 
-You can deploy this to Lepton AI with one click:
 
-[![Deploy with Lepton AI](https://github.com/leptonai/search_with_lepton/assets/1506722/bbd40afa-69ee-4acb-8974-d060880a183a)](https://dashboard.lepton.ai/workspace-redirect/explore/detail/search-by-lepton)
 
-You can also deploy your own version via
-
-```shell
-lep photon run -n search-with-lepton-modified -m search_with_lepton.py --env BACKEND=BING --env BING_SEARCH_V7_SUBSCRIPTION_KEY=YOUR_BING_SUBSCRIPTION_KEY
-```
-
-Learn more about `lep photon` [here](https://www.lepton.ai/docs).
